@@ -3,18 +3,30 @@ ASP.NET Core 6 kullanılarak geliştirilmiş, N katmanlı mimari prensiplerine d
 <br>
 
 **Kullanılan Teknolojiler:**<br>
-*Backend: ASP.NET Core 6, C#
-*Frontend: HTML, CSS, Razor Pages
-*Veritabanı: Entity Framework Core (Code-First yaklaşımı)
-*Kimlik ve Yetkilendirme: ASP.NET Core Identity
-*Şifreleme ve Güvenlik: Şifre hashleme, JWT (JSON Web Token) kullanımı
-*View Component'ler: Özelleştirilmiş kullanıcı ara yüzleri için
+*Backend: ASP.NET Core 6, C#<br>
+*Frontend: HTML, CSS, Razor Pages<br>
+*Veritabanı: Entity Framework Core (Code-First yaklaşımı)<br>
+*Kimlik ve Yetkilendirme: ASP.NET Core Identity<br>
+*Şifreleme ve Güvenlik: Şifre hashleme<br>
+*View Component'ler: Özelleştirilmiş kullanıcı ara yüzleri için<br>
 *Validasyonlar: Frontend ve Backend taraflı validasyonlar
 
 **Ekran Resimleri:**<br>
 
 
-![](https://github.com/eyupogluuu/TatilSeyahatSitesi/blob/master/giriş.PNG)<br> <br>
+![](https://github.com/eyupogluuu/MyAcademyCarBook/blob/master/CarbookEkranG/anasayfa.PNG)<br> <br>
+![](https://github.com/eyupogluuu/MyAcademyCarBook/blob/master/CarbookEkranG/aracfiltre.PNG)<br> <br>
+![](https://github.com/eyupogluuu/MyAcademyCarBook/blob/master/CarbookEkranG/araclistesi.PNG)<br> <br>
+![](https://github.com/eyupogluuu/MyAcademyCarBook/blob/master/CarbookEkranG/hizmetler.PNG)<br> <br>
+![](https://github.com/eyupogluuu/MyAcademyCarBook/blob/master/CarbookEkranG/hakkimizda.PNG)<br> <br>
+![](https://github.com/eyupogluuu/MyAcademyCarBook/blob/master/CarbookEkranG/takimimiz.PNG)<br> <br>
+![](https://github.com/eyupogluuu/MyAcademyCarBook/blob/master/CarbookEkranG/iletisim.PNG)<br> <br>
+![](https://github.com/eyupogluuu/MyAcademyCarBook/blob/master/CarbookEkranG/girisyap.PNG)<br> <br>
+![](https://github.com/eyupogluuu/MyAcademyCarBook/blob/master/CarbookEkranG/hesapolustur.PNG)<br> <br>
+![](https://github.com/eyupogluuu/MyAcademyCarBook/blob/master/CarbookEkranG/araclistesiadmin.PNG)<br> <br>
+![](https://github.com/eyupogluuu/MyAcademyCarBook/blob/master/CarbookEkranG/fiyatlandirma.PNG)<br> <br>
+![](https://github.com/eyupogluuu/MyAcademyCarBook/blob/master/CarbookEkranG/fiyatlandirmaguncel.PNG)<br> <br>
+![](https://github.com/eyupogluuu/MyAcademyCarBook/blob/master/CarbookEkranG/gelenkutusu.PNG)<br> <br>
 
 
 **Amaç**
