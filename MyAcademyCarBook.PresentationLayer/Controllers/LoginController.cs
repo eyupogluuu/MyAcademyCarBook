@@ -1,0 +1,35 @@
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using MyAcademyCarBook.DataAccessLayer.EntityFramework;
+using MyAcademyCarBook.EntityLayer.Concrete;
+using MyAcademyCarBook.PresentationLayer.Models;
+
+namespace MyAcademyCarBook.PresentationLayer.Controllers
+{
+    public class LoginController : Controller
+    {
+        private readonly SignInManager<AppUser> _signInManager;
+
+        public LoginController(SignInManager<AppUser> signInManager)
+        {
+            _signInManager = signInManager;
+        }
+
+        [HttpGet]
+        public IActionResult Index()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> Index(LoginViewModel model)
+        {
+            var result = await _signInManager.PasswordSignInAsync(model.userName, model.password, false, false);
+            if (result.Succeeded)
+            {
+                return RedirectToAction("Index", "AdminDashboard");
+            }
+            return View();
+        }
+    }
+}

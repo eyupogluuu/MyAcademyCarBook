@@ -1,0 +1,22 @@
+﻿@model Price
+@{
+    ViewData["Title"] = "priceUpdate";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h3 class="header">Yeni Ödeme Planı Güncelleme</h3>
+<br />
+<form method="post">
+    <input type="hidden" asp-for="priceID"/>
+    <label> Araba </label>
+    @Html.DropDownListFor(x=>x.carID,(List<SelectListItem>)ViewBag.v,new {@class="form-control",@style="border:groove"})
+    <br />
+    <label>Ödeme Tipi</label>
+    <input type="text" asp-for="priceType" class="form-control" style="border:groove" />
+    <br />
+    <label>Fiyatı</label>
+    <input type="text" asp-for="priceValue" class=" form-control" style="border:groove" />
+    <br />
+    <button class="btn btn-outline-info">Kaydet</button>
+</form>
+

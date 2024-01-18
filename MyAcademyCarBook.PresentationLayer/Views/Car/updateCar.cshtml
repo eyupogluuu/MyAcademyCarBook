@@ -1,0 +1,46 @@
+﻿@model Car
+@{
+    ViewData["Title"] = "updateCar";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h1>Araç Güncelleme</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="carID" /> <!-- CarID'yi gizli bir alan olarak ekledik -->
+
+    <label>Model:</label>
+    <input type="text" asp-for="model" class="form-control" style="border:2px solid #2222" />
+    <br />
+    <label>Kategori:</label>
+    @Html.DropDownListFor(x => x.carcategoryID, (List<SelectListItem>)ViewBag.CarCategoryList, new { @class = "form-control", style = "border:2px solid #2222;" })
+    <br />
+    <label>Marka:</label>
+    @Html.DropDownListFor(x => x.brand, (List<SelectListItem>)ViewBag.BrandList, new { @class = "form-control", style = "border:2px solid #2222;" })
+    <br />
+    <label>Görsel:</label>
+    <input type="text" asp-for="imageUrl" class="form-control" style="border:2px solid #2222" />
+    <br />
+    <label>Vites:</label>
+    <select asp-for="gearType" class="form-control" style="border:2px solid #2222">
+        <option value="Otomatik">Otomatik</option>
+        <option value="Yarı Otomatik">Yarı Otomatik</option>
+        <option value="Manuel">Manuel</option>
+    </select>
+    <br />
+
+    <label>Km:</label>
+    <input type="text" asp-for="KM" class="form-control" style="border:2px solid #2222" />
+    <br />
+    <label>Kapasite:</label>
+    <input type="text" asp-for="personCount" class="form-control" style="border:2px solid #2222" />
+    <br />
+    <label>Yıl:</label>
+    <input type="text" asp-for="year" class="form-control" style="border:2px solid #2222" />
+    <br />
+    <label>Araç Durumu:</label>
+    @Html.DropDownListFor(x => x.carStatusID, (List<SelectListItem>)ViewBag.CarStatusList, new { @class = "form-control", style = "border:2px solid #2222;" })
+    <br />
+
+    <button class="btn btn-primary">Güncelle</button>
+</form>

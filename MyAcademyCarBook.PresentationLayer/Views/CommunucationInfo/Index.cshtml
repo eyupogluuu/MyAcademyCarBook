@@ -1,0 +1,31 @@
+﻿@model List<CommunucationInfo>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h1>İletişim Bilgileri</h1>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Adres</th>
+        <th>Telefon</th>
+        <th>Mail</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.communucationInfoID</td>
+            <td>@item.address</td>
+            <td>@item.phone</td>
+            <td>@item.email</td>
+            <td><a href="/ContactInfo/DeleteContactInfo/@item.communucationInfoID" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/ContactInfo/UpdateContactInfo/@item.communucationInfoID" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/ContactInfo/CreateContactInfo" class="btn btn-outline-primary">Yeni Adres Girişi</a>
+

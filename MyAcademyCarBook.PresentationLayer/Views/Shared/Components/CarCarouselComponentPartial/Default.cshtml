@@ -1,0 +1,128 @@
+﻿@model List<Car>
+<div class="site-section bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <h3>İşte Araçlarımız</h3>
+                <p class="mb-4">Güncel ve bakımlı modellerimiz,
+                    konforlu ve güvenli bir sürüş deneyimi sunmanın yanı sıra estetik ve fonksiyonelliği bir araya getirir. </p>
+                <p>
+                    <a href="#" class="btn btn-primary custom-prev">Önceki</a>
+                    <span class="mx-2">/</span>
+                    <a href="#" class="btn btn-primary custom-next">Sonraki</a>
+                </p>
+            </div>
+            <div class="col-lg-9">
+
+                <div class="nonloop-block-13 owl-carousel">
+                    @* @foreach (var item in Model)
+                    {
+                        <div class="item-1">
+                            <a href="#"><img src="@item.imageUrl" alt="Image" class="img-fluid" style="height:200px;width:400px"></a>
+                            <div class="item-1-contents">
+                                <div class="text-center">
+                                    <h3><a href="#">@item.brand.brandName @item.model</a></h3>
+                                    <div class="rating">
+                                        <span class="icon-star text-warning"></span>
+                                        <span class="icon-star text-warning"></span>
+                                        <span class="icon-star text-warning"></span>
+                                        <span class="icon-star text-warning"></span>
+                                        <span class="icon-star text-warning"></span>
+                                    </div>
+                                    <div class="rent-price">
+                                        @if (item.prices != null)
+                                        {
+                                            @foreach (var price in item.prices)
+                                            {
+                                                <span>@price.priceType:</span>
+                                                <span class="spec">@price.priceValue ₺ </span>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <span>Ücret bilgisi bulunmamaktadır.</span>
+                                        }
+                                    </div>
+                                </div>
+                                <ul class="specs">
+                                    <li>
+                                        <span>Koltuk sayısı</span>
+                                        <span class="spec">@item.personCount</span>
+                                    </li>
+                                    <li>
+                                        <span>Vites türü</span>
+                                        <span class="spec">@item.gearType</span>
+                                    </li>
+                                    <li>
+                                        <span>Yıl</span>
+                                        <span class="spec">@item.year</span>
+                                    </li>
+                                </ul>
+                                <div class="d-flex action">
+                                    <a href="contact.html" class="btn btn-primary">Kirala</a>
+                                </div>
+                            </div>
+                        </div>
+                    } *@
+                    @foreach(var item in Model)
+                    {
+                        <div class="item-1">
+                            <a href="#"><img src="@item.imageUrl" alt="Image" class="img-fluid" style="height:200px;width:400px"></a>
+                            <div class="item-1-contents">
+                                <div class="text-center">
+                                    <h3><a href="#">@item.brand.brandName @item.model</a></h3>
+                                    <div class="rating">
+                                        <span class="icon-star text-warning"></span>
+                                        <span class="icon-star text-warning"></span>
+                                        <span class="icon-star text-warning"></span>
+                                        <span class="icon-star text-warning"></span>
+                                        <span class="icon-star text-warning"></span>
+                                    </div>
+                                    <div class="rent-price">
+                                        @if (item.prices != null && item.prices.Any())
+                                        {
+                                            @foreach (var price in item.prices)
+                                            {
+                                                <span>@price.priceType:</span>
+                                                <span class="spec">@price.priceValue ₺ </span>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <span>Fiyat bilgisi bulunmamaktadır.</span>
+                                        }
+                                    </div>
+                                    @* <div class="rent-price">
+                                        @foreach (var price in item.prices)
+                                        {
+                                            <span>@price.priceType:</span>
+                                            <span class="spec">@price.priceValue ₺ </span>
+                                        }
+                                    </div> *@
+                                </div>
+                                <ul class="specs">
+                                    <li>
+                                        <span>Koltuk sayısı</span>
+                                        <span class="spec">@item.personCount</span>
+                                    </li>
+                                    <li>
+                                        <span>Vites türü</span>
+                                        <span class="spec">@item.gearType</span>
+                                    </li>
+                                    <li>
+                                        <span>Yıl</span>
+                                        <span class="spec">@item.year</span>
+                                    </li>
+                                </ul>
+                                <div class="d-flex action">
+                                    <a href="contact.html" class="btn btn-primary">Kirala</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

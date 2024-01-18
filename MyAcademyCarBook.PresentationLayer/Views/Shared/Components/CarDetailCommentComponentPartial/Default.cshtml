@@ -1,0 +1,20 @@
+﻿@model List<Comment>
+
+<h3 class="mb-5">@Model.Count() Yorum</h3>
+<ul class="comment-list">
+    @foreach (var item in Model)
+    {
+        <li class="comment">
+            <div class="vcard bio">
+                <img src="~/carrent-master/images/person_2.jpg" alt="Free Website Template by Free-Template.co">
+            </div>
+            <div class="comment-body">
+                <h3>@item.nameSurname</h3>
+                <div class="meta">@item.commentDate.ToShortDateString()</div>
+                <p>@item.descreption</p>
+                
+            </div>
+        </li>
+    }
+    
+</ul>

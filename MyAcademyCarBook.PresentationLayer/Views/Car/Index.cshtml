@@ -1,0 +1,45 @@
+﻿@model List<Car>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h1>Araba Listesi</h1>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Görsel</th>
+        <th>Model</th>
+  @*       <th>Kategori</th> *@
+        <th>Marka</th>
+        <th>Vites Türü</th>
+        <th>Yıl</th>
+        <th>Araba Durumu</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Detaylar</th>
+        <th>Sitede Gör</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.carID</td>
+            <td style="text-align: center; vertical-align: middle;">
+                <img src="@item.imageUrl" style="width:300px;height:200px" />
+            </td>
+            <td>@item.model</td>
+      @*       <td>@item.carCategory.carcategoryName</td> *@
+            <td>@item.brand.brandName</td>
+            <td>@item.gearType</td>
+            <td>@item.year</td>
+            <td>@item.carStatus.carStatus</td>
+            <td><a href="/Car/deleteCar/@item.carID" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Car/updateCar/@item.carID" class="btn btn-outline-success">Güncelle</a></td>
+            <td><a href="#" class="btn btn-outline-dark">Detaylar</a></td>
+            <td><a href="#" class="btn btn-outline-warning">Sitede Gör</a> </td>
+        </tr>
+    }
+</table>
+<a href="/Car/addCar" class="btn btn-info">Yeni Araç Girişi</a>
+

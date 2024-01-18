@@ -1,0 +1,30 @@
+﻿@model List<Service>
+@{
+    ViewData["Title"] = "serviceList2";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Numara</th>
+        <th>Hizmet Başlığı</th>
+        <th>Sil </th>
+        <th>Güncelle </th>
+        
+    </tr>
+    @foreach (var c in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@c.tittle</td>           
+            <td><a href="/Service/serviceDelete/@c.serviceID" class="btn btn-outline-danger">Sil </a></td>
+            <td><a href="/Service/serviceUpdate/@c.serviceID" class="btn btn-outline-success">Güncelle </a></td>
+            
+        </tr>
+    }
+</table>
+<a href="/Service/addService/" class="btn btn-outline-info">Yeni Hizmet Ekle</a>
+
+

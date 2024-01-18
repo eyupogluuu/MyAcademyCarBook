@@ -1,0 +1,33 @@
+﻿@model List<MyAcademyCarBook.EntityLayer.Concrete.CarStatus>
+@{
+	ViewData["Title"] = "carStatusList";
+	Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<br />
+<br />
+
+<h3 class="header">Araç Durum Listesi </h3>
+<br />
+<table class="table table-bordered">
+	<tr>
+		<th>Durum ID</th>
+		<th>Durumu</th>
+		<th>Sil</th>
+		<th>Güncelle</th>
+		<th>Araç Detayları</th>
+	</tr>
+	@foreach (var c in Model)
+	{
+		<tr>
+			<td>@c.carStatusID</td>
+			<td>@c.carStatus</td>
+			<td><a href="/CarStatus/carStatusDelete/@c.carStatusID" class="btn btn-outline-danger">Sil</a></td>
+			<td><a href="/CarStatus/carStatusUpdate/@c.carStatusID" class="btn btn-outline-success">Güncelle</a></td>
+			<td><a href="#" class="btn btn-outline-warning">Detaylar</a></td>
+		</tr>
+	}
+</table>
+<a href="/CarStatus/carStatusAdd/" class="btn btn-outline-info">Yeni Araç Durumu Ekle</a>
+
+
